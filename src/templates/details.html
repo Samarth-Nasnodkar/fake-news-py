@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='index.css') }}">
+  <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='details.css') }}">
   <title>Fake News Detector</title>
 </head>
 <body>
@@ -17,11 +17,12 @@
   </script>
   <div class="app-main">
     <h1 style="cursor: pointer;" onclick="redirectHome()">Fake News Checker</h1>
-    <div class="article-input">
-      <p>Enter a news article URL below to check if it's fake news.</p>
-      <form action="/details" class="url-input-form" method="get">
-        <input class="article-url-input" type="text" placeholder="Enter a news article URL" name="url" id="url"/>
-        <button class="url-submit-btn" type="submit">Proceed</button>
+    <div class="article-details">
+      <h3>Article Preview</h3>
+      <p>&#40; Feel free to edit! &#41;</p>
+      <form action="/result" method="post" class="article-preview-form">
+        <textarea class="article-preview" name="article-text">{{content}}</textarea>
+        <button class="verify-btn" type="submit">Verify News</button>
       </form>
     </div>
   </div>

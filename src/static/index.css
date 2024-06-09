@@ -1,0 +1,73 @@
+.app-main {
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  color: black;
+  font-family: "Inconsolata", monospace;
+}
+
+.app-main > h1 {
+  font-size: 40px;
+  margin-left: 30px;
+  font-weight: 900;
+ text-decoration: dashed underline;
+}
+
+.article-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+}
+
+.article-input > p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+  
+.url-input-form > input {
+  font-family: "Inconsolata", monospace;
+}
+
+.article-url-input {
+  width: 50%;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+  outline: none;
+  border: 3px solid black;
+}
+
+.article-url-input:focus {
+  outline: none;
+}
+
+.url-input-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.url-submit-btn {
+  font-family: "Inconsolata", monospace;
+  font-weight: bold;
+  margin-top: 30px;
+  border: 4px solid black;
+  border-radius: 10px;
+  background-color: darkorange;
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.url-submit-btn:hover {
+  background-color: orange;
+  transform: scale(1.5);
+  transition-duration: 1s;
+}

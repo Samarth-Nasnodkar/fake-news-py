@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='index.css') }}">
+  <title>Fake News Detector</title>
+</head>
+<body>
+  <div class="app-main">
+    <h1>Fake News Checker</h1>
+    <div class="article-input">
+      <p>Enter a news article URL below to check if it's fake news.</p>
+      <form action="/details" class="url-input-form" method="get">
+        <input class="article-url-input" type="text" placeholder="Enter a news article URL" name="url" id="url"/>
+        <button class="url-submit-btn" type="submit">Proceed</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='result.css') }}">
+  <title>Fake News Detector</title>
+  <style>
+    body {
+      background-color: {{bgColor}};
+    }
+  </style>
+</head>
+<body>
+  <script>
+    function redirectHome() {
+      window.location.href = '/';
+    }
+    
+
+    // const root = document.documentElement;
+
+    // document.addEventListener("mousemove", evt => {
+    //   let x = evt.clientX / innerWidth;
+    //   let y = evt.clientY / innerHeight;
+
+    //   root.style.setProperty("--mouse-x", x);
+    //   root.style.setProperty("--mouse-y", y);
+    // });
+  </script>
+  <div class="app-main">
+    <h1 style="cursor: pointer;" onclick="redirectHome()">Fake News Checker</h1>
+    <div class="article-details">
+      <h3>This news is likely to be {{result}}</h3>
+      <button class="verify-btn" onclick="redirectHome()">Verify Another Article</button>
+    </div>
+  </div>
+</body>
+</html>

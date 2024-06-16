@@ -19,10 +19,16 @@ def details():
 def result():
   articleText = request.form['article-text']
   prediction = news.predict(articleText)
+  result = ''
+  bgColor = ''
   if prediction == 0:
-    return '<p>Fake News</p>'
+    result = 'Fake'
+    bgColor = 'darkred'
+  else:
+    result = 'Real'
+    bgColor = 'green'
   
-  return '<p>Real News</p>'
+  return render_template('result.html', result=result, bgColor=bgColor)
 
 if __name__ == '__main__':
   app.run('0.0.0.0', port=8000, debug=True)

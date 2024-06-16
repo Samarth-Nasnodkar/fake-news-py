@@ -7,6 +7,11 @@
 pip install -r requirements.txt
 ```
 
+### Virtual Env
+```sh
+source bin/activate
+```
+
 ### Run
 
 ```sh
